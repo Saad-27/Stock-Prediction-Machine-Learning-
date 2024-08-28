@@ -1,4 +1,4 @@
-Overview
+Overview:
 This project implements a Long Short-Term Memory (LSTM) model to predict future stock prices based on recently recorded data. Predicts the next 5 minutes of the stock, using data sampled every 10 seconds. Out put will be either "UP 00.00" or "Down 00.00"
 
 Project Structure
