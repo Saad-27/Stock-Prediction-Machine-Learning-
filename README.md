@@ -43,7 +43,9 @@ Scikit-learn,
 Run process:
 
 Run the data processing script to generate the required features:
+
 python data_processing.py
+
 This script will generate a featured_stock_data.csv file containing the processed data.
 
 Prepare the data for model training by running:
