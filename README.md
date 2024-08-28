@@ -9,15 +9,17 @@ data_preparation.py:
 Prepares the processed data for training, creating the necessary input features
 model_training.py:
 Builds and trains the LSTM model using the best hyperparameters found from previous tuning. Note this process was very intensive on hardware
+
+
 make_prediction.py:
 Loads the trained LSTM model and makes predictions on whether the stock price will go up or down, including the change in price
 
 Important Notes
 
 Data Sampling Interval:
-The model is designed for stock data sampled every 10 seconds. Ensure that the input data follows this format for accurate predictions. Most publically available data does not follow this structure
+The model is designed for stock data sampled every 10 seconds. Ensure that the input data follows this format for accurate predictions. (Most publically available data does not follow this structure)
 
-Prediction Horizon:
+Prediction:
 The model predicts the stock price 5 minutes (30 data points) into the future.
 
 Model Type:
@@ -31,11 +33,11 @@ The model uses predefined "best" hyperparameters for training. If you wish to ex
 
 Prerequisites
 
-Python 3.7+
-TensorFlow 2.x
-Pandas
-NumPy
-Scikit-learn
+Python 3.7+,
+TensorFlow 2.x,
+Pandas,
+NumPy,
+Scikit-learn,
 
 
 Run process:
@@ -45,15 +47,20 @@ python data_processing.py
 This script will generate a featured_stock_data.csv file containing the processed data.
 
 Prepare the data for model training by running:
+
 python data_preparation.py
 
 Train the LSTM model with the prepared data:
+
 python model_training.py
+
 This script will train the model and save it as best_stock_lstm_model.h5.
 
 Make Predictions:
 Once the model is trained, you can use it to make predictions:
+
 python make_prediction.py
+
 The prediction output will indicate whether the stock price is expected to go "UP" or "DOWN" in the next 5 minutes, and by how much.
 
 Example Usage
@@ -67,4 +74,4 @@ prediction_horizon variable in the data_preparation.py script is the determining
 
 Experimenting with Hyperparameters:
 
-If you wish to experiment with different hyperparameters, modify the best_params dictionary in model_training.py and retrain the model.
+If you want to experiment with different hyperparameters, modify the best_params dictionary in model_training.py and retrain the model.
