@@ -1,7 +1,8 @@
-Overview:
+**Overview:
+
 This project implements a Long Short-Term Memory (LSTM) model to predict future stock prices based on recently recorded data. Predicts the next 5 minutes of the stock, using data sampled every 10 seconds. Out put will be either "UP 00.00" or "Down 00.00"
 
-Project Structure
+**Project Structure
 
 data_processing.py:
 Handles the initial data processing and feature engineering
@@ -14,7 +15,7 @@ Builds and trains the LSTM model using the best hyperparameters found from previ
 make_prediction.py:
 Loads the trained LSTM model and makes predictions on whether the stock price will go up or down, including the change in price
 
-Important Notes
+**Important Notes
 
 Data Sampling Interval:
 The model is designed for stock data sampled every 10 seconds. Ensure that the input data follows this format for accurate predictions. (Most publically available data does not follow this structure)
@@ -31,7 +32,7 @@ Key features include lagged prices, rolling mean, and rolling standard deviation
 Hyperparameters:
 The model uses predefined "best" hyperparameters for training. If you wish to experiment with different parameters, you can modify the model_training.py script accordingly.
 
-Prerequisites
+**Prerequisites
 
 Python 3.7+,
 TensorFlow 2.x,
@@ -40,7 +41,7 @@ NumPy,
 Scikit-learn,
 
 
-Run process:
+**Run process:
 
 Run the data processing script to generate the required features:
 
@@ -65,12 +66,12 @@ python make_prediction.py
 
 The prediction output will indicate whether the stock price is expected to go "UP" or "DOWN" in the next 5 minutes, and by how much.
 
-Example Usage
+**Example Usage
 
 Prediction: UP 12.50
 This means that based on the current and past data, the model predicts the stock price will increase by 12.50 units over the next 5 minutes.
 
-Customization
+**Customization
 
 prediction_horizon variable in the data_preparation.py script is the determining variable for how far ahead you want to predict
 
